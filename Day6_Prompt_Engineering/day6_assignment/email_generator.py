@@ -16,14 +16,24 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Verify API configuration
-api_key = os.getenv("OPENAI_API_KEY")
-if not api_key:
-    print("Error: OPENAI_API_KEY environment variable is not set.")
-    print("Please set up your .env file as instructed in the README.")
-    sys.exit(1)
+groq_key = os.getenv("GROQ_API_KEY")
 
-# Initialize OpenAI Client
-client = OpenAI(api_key=api_key)
+if groq_key and not groq_key.endswith("_here"):
+    print("[Active LLM Provider: Groq (llama-3.3-70b-versatile)]")
+    client = OpenAI(
+        api_key=groq_key,
+        base_url="https://api.groq.com/openai/v1"
+    )
+    MODEL_NAME = "llama-3.3-70b-versatile"
+else:
+    ollama_base = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434/v1")
+    ollama_model = os.getenv("OLLAMA_MODEL", "llama3")
+    print(f"[Active LLM Provider: Ollama ({ollama_model} via {ollama_base})]")
+    client = OpenAI(
+        api_key="ollama",
+        base_url=ollama_base
+    )
+    MODEL_NAME = ollama_model
 
 SYSTEM_ROLE = """
 You are a top-performing Sales Development Representative (SDR). Your outbound emails are personalized, short, and under 150 words.
@@ -95,7 +105,7 @@ def generate_email(name: str, role: str, company: str, pain_point: str) -> str:
     
     try:
         response = client.chat.completions.create(
-            model="gpt-3.5-turbo",
+            model=MODEL_NAME,
             messages=[
                 {"role": "system", "content": SYSTEM_ROLE},
                 {"role": "user", "content": user_prompt}

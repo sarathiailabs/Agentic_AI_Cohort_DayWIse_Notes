@@ -31,7 +31,9 @@ Copy the example environment file:
 ```bash
 copy .env.example .env
 ```
-Open `.env` and paste your actual `OPENAI_API_KEY`.
+Open `.env` and configure your API Keys:
+- To use **Groq** (recommended): Paste your `GROQ_API_KEY`.
+- To use **Ollama** (local): Ensure Ollama is running and set `OLLAMA_BASE_URL` (default: `http://localhost:11434/v1`) and `OLLAMA_MODEL` (default: `llama3`).
 
 ---
 

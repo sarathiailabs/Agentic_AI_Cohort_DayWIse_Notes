@@ -12,7 +12,7 @@ Use this document to quickly recap the lecture concepts, copy starter code snipp
 | **Topic** | Generative AI & LLM APIs (AI vs ML, Tokens, Parameters, Temperature, multi-providers) |
 | **Key SDKs** | `openai`, `google-generativeai`, `groq` |
 | **Assignment** | Build an AI Career Mentor CLI tool with conversation memory and cost counters |
-| **Reference Materials** | [Main Lecture](file:///d:/New_Code_file/sarathiAILabsTeachingNotes/Agentic_AI_Cohort_DayWIse_Notes/Day5_Generative_AI_and_LLM_APIs/Day5_Teaching_content/01_Main_Lecture.md) \| [Code Examples Notebook](file:///d:/New_Code_file/sarathiAILabsTeachingNotes/Agentic_AI_Cohort_DayWIse_Notes/Day5_Generative_AI_and_LLM_APIs/Day5_Teaching_content/07_Code_Examples.ipynb) \| [FAQs](file:///d:/New_Code_file/sarathiAILabsTeachingNotes/Agentic_AI_Cohort_DayWIse_Notes/Day5_Generative_AI_and_LLM_APIs/Day5_Teaching_content/12_FAQs.md) |
+| **Reference Materials** | [Main Lecture](file:///d:/New_Code_file/sarathiAILabsTeachingNotes/Agentic_AI_Cohort_DayWIse_Notes/Day5_Generative_AI_and_LLM_APIs/Day5_Teaching_content/Day5_Lecture_Guide.md) \| [Code Examples Notebook](file:///d:/New_Code_file/sarathiAILabsTeachingNotes/Agentic_AI_Cohort_DayWIse_Notes/Day5_Generative_AI_and_LLM_APIs/Day5_Teaching_content/Day5_Code_Demos.ipynb) \| [FAQs](file:///d:/New_Code_file/sarathiAILabsTeachingNotes/Agentic_AI_Cohort_DayWIse_Notes/Day5_Generative_AI_and_LLM_APIs/Day5_Teaching_content/Day5_Lecture_Guide.md) |
 
 ---
 
@@ -83,7 +83,7 @@ load_dotenv()
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 response = client.chat.completions.create(
-    model="gpt-3.5-turbo",
+    model="gpt-4o-mini",
     messages=[
         {"role": "system", "content": "You are a direct, concise helper."},
         {"role": "user", "content": "Explain context windows."}
@@ -117,7 +117,7 @@ load_dotenv()
 client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 
 response = client.chat.completions.create(
-    model="llama3-8b-8192",
+    model="llama-3.3-70b-versatile",
     messages=[{"role": "user", "content": "Hello Llama3!"}],
     temperature=0
 )
@@ -193,7 +193,7 @@ class CareerMentor:
         
         try:
             response = client.chat.completions.create(
-                model="gpt-3.5-turbo",
+                model="gpt-4o-mini",
                 messages=messages,
                 temperature=0.3
             )
@@ -265,7 +265,8 @@ def main():
             mentor.save_session()
             continue
         elif user_input.lower() == "stats":
-            cost = (mentor.total_tokens_used / 1000) * 0.0015
+            # gpt-4o-mini pricing: $0.15/1M input, $0.60/1M output
+            cost = (mentor.total_tokens_used / 1_000_000) * 0.15
             print(f"\n📊 Session Statistics:")
             print(f"- Messages exchanged: {mentor.message_count}")
             print(f"- Approximate tokens: {mentor.total_tokens_used}")
@@ -302,4 +303,4 @@ if __name__ == "__main__":
 ### Q3: What is a Context Window limit, and what occurs when a conversation exceeds it?
 *   **Answer:** The context window is the absolute limit of tokens a model can process in a single request (sum of prompt tokens + completion tokens). When a session history grows too large and exceeds this limit, the provider API throws a runtime exception and rejects the call. Developers handle this by sliding/summarizing older memory turns.
 
-Good luck completing your career mentor assignment! If you face issues, check the [FAQs](file:///d:/New_Code_file/sarathiAILabsTeachingNotes/Agentic_AI_Cohort_DayWIse_Notes/Day5_Generative_AI_and_LLM_APIs/Day5_Teaching_content/12_FAQs.md) and [Common Mistakes](file:///d:/New_Code_file/sarathiAILabsTeachingNotes/Agentic_AI_Cohort_DayWIse_Notes/Day5_Generative_AI_and_LLM_APIs/Day5_Teaching_content/11_Common_Mistakes.md) files in this directory.
+Good luck completing your career mentor assignment! If you face issues, check the [FAQs](file:///d:/New_Code_file/sarathiAILabsTeachingNotes/Agentic_AI_Cohort_DayWIse_Notes/Day5_Generative_AI_and_LLM_APIs/Day5_Teaching_content/Day5_Lecture_Guide.md) and [Common Mistakes](file:///d:/New_Code_file/sarathiAILabsTeachingNotes/Agentic_AI_Cohort_DayWIse_Notes/Day5_Generative_AI_and_LLM_APIs/Day5_Teaching_content/Day5_Lecture_Guide.md) files in this directory.
