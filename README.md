@@ -23,7 +23,56 @@ The cohort is structured as a rigorous, project-oriented, 20-day roadmap taking 
 ```
 
 > [!NOTE]
-> Currently, the detailed Day-by-Day notes are being actively populated, with **Day 5 (Generative AI & LLM APIs)** fully implemented with complete lectures, teaching notes, Jupyter notebooks, projects, assignments, and solution guides.
+> Currently, the detailed Day-by-Day notes are being actively populated, with **Day 2 (Python Functions & Data Structures)**, **Day 3 (Advanced Python)**, **Day 4 (Git & GitHub Fundamentals)**, and **Day 5 (Generative AI & LLM APIs)** fully implemented with complete lectures, teaching notes, Jupyter notebooks, projects, assignments, and solution guides.
+
+---
+
+## 📅 Day 2: Python Functions & Data Structures
+
+Day 2 covers reusable logic using Functions, dynamic collections in Lists, immutable configurations in Tuples, duplicate filtering and set algebra using Sets, relational key-value storage in Dictionaries, and clean data pipelines using List Comprehensions.
+
+### 🗂️ Day 2 Folder Structure
+The notes, interactive code notebooks, and reference solution inside [Day2_Python_Functions_and_Data_Structures](file:///d:/New_Code_file/sarathiAILabsTeachingNotes/Agentic_AI_Cohort_DayWIse_Notes/Day2_Python_Functions_and_Data_Structures) are organized as follows:
+
+| File | Content Type | Focus |
+|------|--------------|-------|
+| 📜 [01_Complete_Guide.md](file:///d:/New_Code_file/sarathiAILabsTeachingNotes/Agentic_AI_Cohort_DayWIse_Notes/Day2_Python_Functions_and_Data_Structures/Day2_Teaching_content/01_Complete_Guide.md) | Lecture Content | Master reference document for instructors and student study sheets. |
+| 📜 [02_For_the_Students.md](file:///d:/New_Code_file/sarathiAILabsTeachingNotes/Agentic_AI_Cohort_DayWIse_Notes/Day2_Python_Functions_and_Data_Structures/Day2_Teaching_content/02_For_the_Students.md) | Study Reference | Quick cheat sheet on list methods, dictionary lookups, sets, and functions syntax. |
+| 📓 [03_Coding_Notebook.ipynb](file:///d:/New_Code_file/sarathiAILabsTeachingNotes/Agentic_AI_Cohort_DayWIse_Notes/Day2_Python_Functions_and_Data_Structures/Day2_Teaching_content/03_Coding_Notebook.ipynb) | Jupyter Notebook | Practical code walkthroughs, Student Marksheet Analytics Mini Project, and Zomato Billing Engine Industry Project. |
+| 📜 [04_Assignment.md](file:///d:/New_Code_file/sarathiAILabsTeachingNotes/Agentic_AI_Cohort_DayWIse_Notes/Day2_Python_Functions_and_Data_Structures/Day2_Teaching_content/04_Assignment.md) | Assignment Sheet | Prompts to build Coimbatore Retailers Smart Contact Book CLI and Expense Tracker CLI. |
+| 📓 [05_Assignment_Solution.ipynb](file:///d:/New_Code_file/sarathiAILabsTeachingNotes/Agentic_AI_Cohort_DayWIse_Notes/Day2_Python_Functions_and_Data_Structures/Day2_Teaching_content/05_Assignment_Solution.ipynb) | Solution Guide | Working reference implementation of the assignment including JSON persistence and Venn Tag analysis. |
+
+---
+
+## 📅 Day 3: Advanced Python (OOP, Exception Handling & File I/O)
+
+Day 3 covers Object-Oriented Programming (Classes, Objects, and the 4 Pillars of OOP), Exception Handling (try-except blocks and custom Exceptions), and File Handling (reading and writing text, JSON, and CSV files).
+
+### 🗂️ Day 3 Folder Structure
+The notes, interactive code notebooks, and reference solution inside [Day3_Advanced_Python](file:///d:/New_Code_file/sarathiAILabsTeachingNotes/Agentic_AI_Cohort_DayWIse_Notes/Day3_Advanced_Python) are organized as follows:
+
+| File | Content Type | Focus |
+|------|--------------|-------|
+| 📜 [01_Complete_Guide.md](file:///d:/New_Code_file/sarathiAILabsTeachingNotes/Agentic_AI_Cohort_DayWIse_Notes/Day3_Advanced_Python/Day3_Teaching_content/01_Complete_Guide.md) | Lecture Content | Master reference document for instructors and student study sheets. |
+| 📜 [02_For_the_Students.md](file:///d:/New_Code_file/sarathiAILabsTeachingNotes/Agentic_AI_Cohort_DayWIse_Notes/Day3_Advanced_Python/Day3_Teaching_content/02_For_the_Students.md) | Study Reference | Quick cheat sheet on classes, methods, try-except blocks, and file operations. |
+| 📓 [03_Coding_Notebook.ipynb](file:///d:/New_Code_file/sarathiAILabsTeachingNotes/Agentic_AI_Cohort_DayWIse_Notes/Day3_Advanced_Python/Day3_Teaching_content/03_Coding_Notebook.ipynb) | Jupyter Notebook | Practical code walkthroughs, E-commerce Inventory System Mini Project, and Transaction Ledger Engine Industry Project. |
+| 📜 [04_Assignment.md](file:///d:/New_Code_file/sarathiAILabsTeachingNotes/Agentic_AI_Cohort_DayWIse_Notes/Day3_Advanced_Python/Day3_Teaching_content/04_Assignment.md) | Assignment Sheet | Prompts to build Coimbatore Municipal Library Management System CLI. |
+| 📓 [05_Assignment_Solution.ipynb](file:///d:/New_Code_file/sarathiAILabsTeachingNotes/Agentic_AI_Cohort_DayWIse_Notes/Day3_Advanced_Python/Day3_Teaching_content/05_Assignment_Solution.ipynb) | Solution Guide | Working reference implementation of the Library Management System including JSON persistence and fine calculations. |
+
+## 📅 Day 4: Git & GitHub Fundamentals
+
+Day 4 covers Version Control using Git and remote collaboration on GitHub. It teaches repository configuration, files tracking/staging/committing, logs, parallel branching, conflict induction and manual conflict resolution, conventional commits, `.gitignore` rules, and version releases using Git tags.
+
+### 🗂️ Day 4 Folder Structure
+The notes, interactive code notebooks, and reference solution inside [Day4_Git_and_GitHub](file:///d:/New_Code_file/sarathiAILabsTeachingNotes/Agentic_AI_Cohort_DayWIse_Notes/Day4_Git_and_GitHub) are organized as follows:
+
+| File | Content Type | Focus |
+|------|--------------|-------|
+| 📜 [01_Complete_Guide.md](file:///d:/New_Code_file/sarathiAILabsTeachingNotes/Agentic_AI_Cohort_DayWIse_Notes/Day4_Git_and_GitHub/Day4_Teaching_content/01_Complete_Guide.md) | Lecture Content | Master reference document for instructors and student study sheets. |
+| 📜 [02_For_the_Students.md](file:///d:/New_Code_file/sarathiAILabsTeachingNotes/Agentic_AI_Cohort_DayWIse_Notes/Day4_Git_and_GitHub/Day4_Teaching_content/02_For_the_Students.md) | Study Reference | Quick cheat sheet on Git commands, resolving merge conflicts, and Python `.gitignore` layouts. |
+| 📓 [03_Coding_Notebook.ipynb](file:///d:/New_Code_file/sarathiAILabsTeachingNotes/Agentic_AI_Cohort_DayWIse_Notes/Day4_Git_and_GitHub/Day4_Teaching_content/03_Coding_Notebook.ipynb) | Jupyter Notebook | Practical code walkthroughs simulating files state changes, branches, and conflict resolutions. |
+| 📜 [04_Assignment.md](file:///d:/New_Code_file/sarathiAILabsTeachingNotes/Agentic_AI_Cohort_DayWIse_Notes/Day4_Git_and_GitHub/Day4_Teaching_content/04_Assignment.md) | Assignment Sheet | Prompts to build version-controlled Coimbatore Retail Kiosk CLI project. |
+| 📓 [05_Assignment_Solution.ipynb](file:///d:/New_Code_file/sarathiAILabsTeachingNotes/Agentic_AI_Cohort_DayWIse_Notes/Day4_Git_and_GitHub/Day4_Teaching_content/05_Assignment_Solution.ipynb) | Solution Guide | Working reference repository walkthrough simulating branches, conflicts, tagging, and cleanup. |
 
 ---
 
